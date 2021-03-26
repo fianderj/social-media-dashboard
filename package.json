@@ -1,0 +1,16 @@
+{
+  "name": "social-media-dashboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/fianderj/social-media-dashboard.git",
+  "author": "James Fiander",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel -d .dev src/index.html",
+    "prod": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.8"
+  }
+}
