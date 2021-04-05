@@ -22,20 +22,24 @@
             }
         </style>
     </head>
-    <body class="theme-dark">
-        <header>
+    <body class="theme-light">
+        <header class="bg-top">
             <div class="container border-bottom-1">
                 <h1 class="text-primary">Social Media Dashboard</h1>
                 <p class="subtitle mb-3 text-accent">Total Followers: 23,004</p>
             </div>
+            <div class="container theme mb-3 mt-3">
+                <p class="subtitle text-accent">Dark Mode</p>
+                <div class="toggle">
+                    <label class="switch">
+                        <input type="checkbox" id="dark-mode-toggle" />
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
         </header>
 
         <main>
-            <div class="container theme mb-3">
-                <!--<p class="subtitle text-accent">Dark Mode</p>
-                <div class="toggle"></div>-->
-            </div>
-
             <section class="social-totals container mb-3">
                 <div class="social-total__card bg-card">
                     <div class="fb-border-top"></div>
@@ -228,4 +232,13 @@
             >. Coded by <a href="#">James Fiander</a>.
         </div>
     </body>
+
+    <script>
+        document.getElementById("dark-mode-toggle").addEventListener("change", toggleDarkMode);
+
+        function toggleDarkMode() {
+            let body = document.getElementsByTagName("body")[0];
+            body.setAttribute("class", this.checked ? "theme-dark" : "theme-light");
+        }
+    </script>
 </html>
